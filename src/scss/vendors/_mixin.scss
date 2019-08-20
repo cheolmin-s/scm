@@ -1,0 +1,85 @@
+// clearfix;
+@mixin clear{
+    &:after{
+        display:block;
+        content:"";
+        clear:both;
+    }
+}
+
+// bacground-image IR
+@mixin hidden($wt, $ht){
+    overflow:hidden;
+    width:$wt;
+    height:0;
+    max-height:$ht;
+    padding-top:$ht;
+}
+
+// sprite IR
+@mixin spriteIR($sprite, $wt, $ht){
+    overflow:hidden;
+    width:$wt;
+    height:0;
+    max-height:$ht;
+    padding-top:$ht;
+
+	&:after{
+        display:block;
+        content:'';
+        position:absolute;
+		top:0;
+		left:0;
+        @include sprite($sprite);
+    }
+}
+
+// ellipse
+@mixin ellipsis{
+    overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+// 미디어쿼리
+$pc-large-width:1680px;
+$pc-middle-width:1440px;
+$tablet-large-width:1280px;
+$tablet-middle-width:981px;
+$mobile-large-width:758px;
+
+// pc
+@mixin pc-large {
+	@media screen and (max-width: $pc-large-width) {
+		@content;
+	}
+}
+
+@mixin pc-middle {
+	@media screen and (max-width: $pc-middle-width) {
+		@content;
+	}
+}
+
+//---------------------------------------------------
+
+// tablet
+@mixin tablet-large {
+	@media screen and (max-width: $tablet-large-width) {
+		@content;
+	}
+}
+@mixin tablet-middle {
+	@media screen and (max-width: $tablet-middle-width) {
+		@content;
+	}
+}
+
+//----------------------------------------------------
+
+// mobile
+@mixin mobile-large {
+	@media screen and (max-width: $mobile-large-width) {
+		@content;
+	}
+}

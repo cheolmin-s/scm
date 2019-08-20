@@ -1,0 +1,174 @@
+.section-contact{
+
+    .container{
+        @include clear;
+    }
+    .text{
+        padding-bottom:100px;
+        font-size:70px;
+        font-weight:500;
+        @include clear;
+
+        .en{
+            font-family:'Roboto', sans-serif;
+
+            & span{
+                
+                &:nth-child(1){
+                    transform:translateX(-105%);
+                    animation:_text1 1s alternate forwards;
+                    animation-delay:1.5s;
+        
+                    @keyframes _text1{
+                        0%{
+                            opacity:0;
+                            transform:translateX(-105%);
+                        }
+                        100%{
+                            opacity:1;
+                            transform:translateX(0);
+                        }
+                    }                    
+                }
+                &:nth-child(2){
+                    top:100px;
+                    transform:translateX(-105%);
+                    animation:_text2 1s alternate forwards;
+                    animation-delay:1.8s;
+        
+                    @keyframes _text2{
+                        0%{
+                            opacity:0;
+                            transform:translateX(-105%);
+                        }
+                        100%{
+                            opacity:1;
+                            transform:translateX(0);
+                        }
+                    }                    
+                }
+            }
+        }
+        .ko{
+            margin:50px 0 0 33.3333%;
+            font-weight:bold;
+
+            & span{
+
+                &:nth-child(1){
+                    transform:translateX(-105%);
+                    animation:_text3 1s alternate forwards;
+                    animation-delay:2.3s;
+        
+                    @keyframes _text3{
+                        0%{
+                            opacity:0;
+                            transform:translateX(-105%);
+                        }
+                        100%{
+                            opacity:1;
+                            transform:translateX(0);
+                        }
+                    }                    
+                }
+                &:nth-child(2){
+                    top:100px;
+                    transform:translateX(-105%);
+                    animation:_text4 1s alternate forwards;
+                    animation-delay:2.6s;
+        
+                    @keyframes _text4{
+                        0%{
+                            opacity:0;
+                            transform:translateX(-105%);
+                        }
+                        100%{
+                            opacity:1;
+                            transform:translateX(0);
+                        }
+                    }                    
+                }
+            }
+        }
+
+        & > div{
+            position:relative;
+            overflow:hidden;
+            height:200px;
+            padding:0 10px;
+        }
+
+        & span{
+            position:absolute;
+            top:0;
+            line-height:100px;
+        }
+    }
+
+    & h4{
+        padding:0 10px;
+        margin-bottom:30px;
+        font-size:22px;
+        font-weight:500;
+        color:$black;
+        font-family:"Roboto", sans-serif;
+        letter-spacing:2px;
+        box-sizing:border-box;
+    }
+
+    .info{
+        float:left;
+        width:16.6666%;
+        font-family:"Roboto", sans-serif;
+
+        & a{
+           display:block;
+           padding:0 10px;
+           font-size:14px;
+           color:$gray;
+           line-height:30px;
+           letter-spacing:1px;
+
+           &:hover{
+               text-decoration:underline;
+           }
+        }
+    }
+
+    .credits{
+        float:left;
+        width:49.9998%;
+        margin-left:16.6666%;
+        @include clear;
+
+        & > div{
+            float:left;
+            width:33.3334%;
+            padding:0 10px;
+            font-size:14px;
+            color:$gray;
+            line-height:30px;
+            letter-spacing:2px;
+            box-sizing:border-box;
+        }
+
+        & dl{
+            margin-top:30px;
+
+            &:first-of-type{
+                margin-top:0;
+            }
+        }
+
+        & dt{
+            color:$black;
+            font-weight:bold;
+        }
+
+        & dd{
+            min-height:180px;
+            margin-top:10px;
+            line-height:2;
+        }
+    }
+}

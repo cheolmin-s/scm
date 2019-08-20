@@ -1,0 +1,114 @@
+.section-portfolio{
+
+    .portfolio{
+
+        & ul{
+            @include clear;
+        }
+
+        & li{
+            position:relative;
+            float:left;
+            width:33.3334%;
+            margin-bottom:50px;
+            padding:0 10px;
+            box-sizing:border-box;
+
+            &:hover{
+                &:before{
+                    opacity:1;
+                }
+                &:after{
+                    opacity:1;
+                }
+            }
+
+            &:before{
+                display:block;
+                content:"";
+                position:absolute;
+                top:0;
+                left:10px;
+                width:calc(100% - 20px);
+                padding-top:calc(50% - 10px);
+                z-index:5;
+                background:rgba(0,0,0,.4);
+                opacity:0;
+                pointer-events:none;
+                transition:all .5s ease-out;
+            }
+
+            &:after{
+                display:inline-block;
+                content:"이동하기";
+                position:absolute;
+                top:calc(50% - 85px);
+                left:50%;
+                height:36px;
+                z-index:5;
+                padding:0 40px;
+                transform:translate(-50%,-50%);
+                background:#000;
+                color:$white;
+                line-height:36px;
+                letter-spacing:2px;
+                opacity:0;
+                pointer-events:none;
+                transition:all .5s ease-out;
+            }
+
+            & > a{
+                display:block;
+                position:relative;
+                padding-top:50%;
+                
+                &:before{
+                    display:block;
+                    content:"";
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    padding-top:50%;
+                    background:url('../images/portfolio-1.png')no-repeat center top;
+                    background-size:100% 100%;
+                }
+            }
+
+            &:nth-child(2){
+                & > a:before{
+                    background:url('../images/portfolio-2.png')no-repeat center top;
+                    background-size:100% 150%;
+                }
+            }
+            &:nth-child(3){
+                & > a:before{
+                    background:url('../images/portfolio-3.png')no-repeat center top;
+                    background-size:100% 100%;
+                }
+            }
+            &:nth-child(4){
+                & > a:before{
+                    background:url('../images/portfolio-4.png')no-repeat center top;
+                    background-size:100% 100%;
+                }
+            }
+        }
+
+        .info{
+            margin-top:30px;
+            min-height:150px;
+
+            & h4{
+                margin-bottom:15px;
+            }
+
+            & p{
+                font-size:14px;
+                color:$gray;
+                line-height:2;
+            }
+        }
+    }
+
+}
