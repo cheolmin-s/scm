@@ -1,5 +1,9 @@
 .section-portfolio{
 
+    .container{
+        padding:150px 0 0 0;
+    }
+
     .portfolio{
 
         & ul{
@@ -101,10 +105,11 @@
 
             & h4{
                 margin-bottom:15px;
+                font-weight:bold;
             }
 
             & p{
-                font-size:14px;
+                font-size:$font14;
                 color:$gray;
                 line-height:2;
             }

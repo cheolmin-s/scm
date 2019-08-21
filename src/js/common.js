@@ -18,17 +18,16 @@ const scm = {
         const mode = document.querySelector('.mode');
         const wrap = document.querySelector('.wrap');
         const line = document.querySelectorAll('.line');
-        const gnbLink = document.querySelectorAll('.gnb .column a');
         const MODE_TEXT_NAVY = "NAVY";
         const MODE_TEXT_WHITE = "WHITE";
+        const MODE_LS = "mode"
 
         function handleGnbClick(){
             header.classList.toggle(CLASS_ON);
         }
 
         function handleModeClick(){
-
-            this.classList.toggle(CLASS_ON);            
+            this.classList.toggle(CLASS_ON);
             wrap.classList.toggle(CLASS_ON);
             line.forEach(line => line.classList.toggle(CLASS_ON));
 
@@ -36,7 +35,7 @@ const scm = {
                 this.childNodes[1].innerText = MODE_TEXT_NAVY;
             } else {
                 this.childNodes[1].innerText = MODE_TEXT_WHITE;
-            }
+            }  
         }
 
         menuBtn.addEventListener('click', handleGnbClick);

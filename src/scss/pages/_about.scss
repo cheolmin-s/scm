@@ -14,8 +14,8 @@
         & h3{
             float:left;
             width:16.6667%;
-            padding:0 10px;
-            font-size:22px;
+            padding-left:10px;
+            font-size:$font22;
             font-weight:bold;
             letter-spacing:0.3px;
             box-sizing:border-box;
@@ -39,7 +39,7 @@
         }
 
         & dt{
-            font-size:16px;
+            font-size:$font16;
             font-weight:bold;
             color:$black;
 
@@ -50,7 +50,7 @@
         }
         & dd{
             margin-top:10px;
-            font-size:14px;
+            font-size:$font14;
             line-height:2;
             color:$gray;
             word-break:break-all;

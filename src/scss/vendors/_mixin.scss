@@ -42,11 +42,12 @@
 }
 
 // 미디어쿼리
-$pc-large-width:1680px;
-$pc-middle-width:1440px;
+$pc-large-width:1600px;
+$pc-middle-width:1460px;
 $tablet-large-width:1280px;
 $tablet-middle-width:981px;
 $mobile-large-width:758px;
+$mobile-middle-width:568px;
 
 // pc
 @mixin pc-large {
@@ -80,6 +81,12 @@ $mobile-large-width:758px;
 // mobile
 @mixin mobile-large {
 	@media screen and (max-width: $mobile-large-width) {
+		@content;
+	}
+}
+
+@mixin mobile-middle {
+	@media screen and (max-width: $mobile-middle-width) {
 		@content;
 	}
 }

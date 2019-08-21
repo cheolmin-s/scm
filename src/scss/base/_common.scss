@@ -1,6 +1,3 @@
-body{
-    font-family:"Roboto", sans-serif;
-}
 
 .mode{
     position:fixed;
@@ -11,18 +8,19 @@ body{
     background:#00cdac;
     border-radius:50px;
     transition:all .3s ease-out;
-    z-index:50;
+    z-index:11;
 
     &.on{
-        background:#000;
+        background:#fff;
 
         &:before{
             left:5px;
+            background:rgba(43, 55, 96 , 1);
         }
 
         & span{
             text-align:right;
-            color:$white;
+            color:rgba(43, 55, 96 , 1);
         }
     }
 
@@ -147,7 +145,9 @@ body{
     border:0;
     clip:rect(1px, 1px, 1px, 1px);
 }
-
+body{
+    font-family:"Roboto", sans-serif;
+}
 .common-header{
     position:relative;
 
@@ -316,7 +316,7 @@ body{
         }
 
         & a{
-            font-size:125px;
+            font-size:$font125;
             font-weight:500;
             color:$black;
             transition:all .5s ease-out;
@@ -369,6 +369,7 @@ body{
 }
 
 .title{
+    font-size:$font100;
     @include clear;
 
     & > div{
@@ -381,7 +382,6 @@ body{
         & span{
             position:absolute;
             top:0;
-            font-size:100px;
             font-weight:700;
             letter-spacing:4px; 
         }
@@ -484,4 +484,8 @@ body{
     &.on span{
         border-color:rgba(255,255,255,.1);
     }
+}
+
+@media screen and (max-width:1200px) {
+    $test:blue;
 }
