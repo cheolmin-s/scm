@@ -14,16 +14,15 @@ const scm = {
     },
 
     main: () => {
+        const skipNav = document.querySelector('.skip-nav');
         const menuBtn = document.querySelector('.menu-btn');
         const header = document.querySelector('.common-header');
         const mode = document.querySelector('.mode');
         const wrap = document.querySelector('.wrap');
         const line = document.querySelectorAll('.line');
         const body = document.body;
-        const form = document.querySelector('form');
         const MODE_TEXT_NAVY = "NAVY";
         const MODE_TEXT_WHITE = "WHITE";
-        const MODE_LS = "mode"
         let current = localStorage.getItem('color');
     
         function handleGnbClick(){
@@ -34,6 +33,11 @@ const scm = {
                 e.stopPropagation();
                 return false;
             });
+            if(header.classList.contains(CLASS_ON)){
+                this.innerText = "메뉴 닫기";                 
+            } else {
+                this.innerText = "메뉴 열기";
+            }
         };
 
         function Mode(){
@@ -76,6 +80,7 @@ const scm = {
              
         };
                 
+        skipNav.addEventListener('click', handleGnbClick);
         mode.addEventListener('click', handleModeClick);
         menuBtn.addEventListener('click', handleGnbClick);
     },

@@ -1,3 +1,29 @@
+// skip nav
+.skip-nav{
+    text-align:center;
+    
+    & a{
+        color:#fff;
+        font-weight:500;
+        position:absolute;
+        top:-50px;
+        left:0;
+        width:100%;
+        padding:10px 0;
+        background:#24629b;
+        z-index:100;
+
+        &:focus{
+            top:0;
+        }
+    }
+}
+
+// common font
+body{
+    font-family:"Roboto", sans-serif;
+}
+
 // common IR
 .blind{
     position:absolute;
@@ -384,7 +410,7 @@
     font-size:$font100;
     @include clear;
 
-    & > div{
+    & div{
         position:relative;
         float:left;
         width:50%;
@@ -398,7 +424,7 @@
             letter-spacing:4px; 
         }
 
-        &:nth-child(1){
+        &:nth-of-type(1){
             text-align:right;
             
             & span{
@@ -418,7 +444,7 @@
                 }
             }
         }
-        &:nth-child(2){
+        &:nth-of-type(2){
             margin-top:30px;
 
             & span{
