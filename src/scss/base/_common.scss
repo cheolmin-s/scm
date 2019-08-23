@@ -1,3 +1,14 @@
+// common IR
+.blind{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    border:0;
+    clip:rect(1px, 1px, 1px, 1px);
+}
+
+// mode btn
 .mode{
     position:fixed;
     top:60px;
@@ -47,6 +58,8 @@
         transition:all .5s ease-out;
     }
 }
+
+// mode btn active
 .wrap{
     position:relative;
     min-height:100%;
@@ -135,25 +148,16 @@
         
     }
 }
-//common IR
-.blind{
-    position:absolute;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    border:0;
-    clip:rect(1px, 1px, 1px, 1px);
-}
-body{
-    font-family:"Roboto", sans-serif;
-}
 
+// scroll-off
 .scroll-off{
     position:fixed;
     overflow:hidden;
     width:100%;
     height:100%;
 }
+
+// header
 .common-header{
     position:relative;
 
@@ -363,6 +367,7 @@ body{
     box-sizing:border-box;
 }
 
+// scroll active
 .active{
     opacity:0;
     transform:translateY(-30px);
@@ -374,6 +379,7 @@ body{
     }
 }
 
+// sub title
 .title{
     font-size:$font100;
     @include clear;
@@ -436,17 +442,20 @@ body{
 
 }
 
+// inner-box
 .inner-box{
     position:relative;
     width:75%;
     margin:0 auto;
 }
 
+// layout box
 .container{
     padding:150px 0 100px 0;
     font-family:'Arita Dotum', sans-serif;
 }
 
+// footer
 .common-footer{
     position:absolute;
     left:0;
@@ -465,6 +474,7 @@ body{
 
 }
 
+// common-line
 .line{
     position:fixed;
     top:0;
@@ -490,8 +500,4 @@ body{
     &.on span{
         border-color:rgba(255,255,255,.1);
     }
-}
-
-@media screen and (max-width:1200px) {
-    $test:blue;
 }
