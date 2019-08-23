@@ -1,4 +1,5 @@
 const CLASS_ON = "on";
+const SCROLL_OFF = "scroll-off";
 
 const scm = {
 
@@ -13,33 +14,75 @@ const scm = {
     },
 
     main: () => {
+        const skipNav = document.querySelector('.skip-nav');
         const menuBtn = document.querySelector('.menu-btn');
         const header = document.querySelector('.common-header');
         const mode = document.querySelector('.mode');
         const wrap = document.querySelector('.wrap');
         const line = document.querySelectorAll('.line');
+        const body = document.body;
         const MODE_TEXT_NAVY = "NAVY";
         const MODE_TEXT_WHITE = "WHITE";
-        const MODE_LS = "mode"
-
+        let current = localStorage.getItem('color');
+    
         function handleGnbClick(){
             header.classList.toggle(CLASS_ON);
+            body.classList.toggle(SCROLL_OFF);
+            body.addEventListener('scoll touchmove mousewheel', function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            });
+            if(header.classList.contains(CLASS_ON)){
+                this.innerText = "메뉴 닫기";                 
+            } else {
+                this.innerText = "메뉴 열기";
+            }
+        };
+
+        function Mode(){
+            
+            this.on = () => {
+                line.forEach(line => line.classList.add(CLASS_ON));
+                mode.childNodes[1].innerText = MODE_TEXT_NAVY;
+                mode.classList.add(CLASS_ON);
+                wrap.classList.add(CLASS_ON);
+                localStorage.setItem('color',true);
+            },
+            this.off = () => {
+                line.forEach(line => line.classList.remove(CLASS_ON));
+                mode.childNodes[1].innerText = MODE_TEXT_WHITE;
+                wrap.classList.remove(CLASS_ON);
+                mode.classList.remove(CLASS_ON);
+                localStorage.removeItem('color');
+            }
+
+            this.load = () => {
+                if(current === null){
+                    modeActive.off();
+                } else {
+                    modeActive.on();          
+                }
+            }
         }
+
+        const modeActive = new Mode();
+        
+        modeActive.load();
 
         function handleModeClick(){
-            this.classList.toggle(CLASS_ON);
-            wrap.classList.toggle(CLASS_ON);
-            line.forEach(line => line.classList.toggle(CLASS_ON));
-
+               
             if(this.classList.contains(CLASS_ON)){
-                this.childNodes[1].innerText = MODE_TEXT_NAVY;
+                modeActive.off();
             } else {
-                this.childNodes[1].innerText = MODE_TEXT_WHITE;
-            }  
-        }
-
-        menuBtn.addEventListener('click', handleGnbClick);
+                modeActive.on();
+            }
+             
+        };
+                
+        skipNav.addEventListener('click', handleGnbClick);
         mode.addEventListener('click', handleModeClick);
+        menuBtn.addEventListener('click', handleGnbClick);
     },
 
     scroll: () => {

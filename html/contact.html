@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<!-- 스킵 네비게이션 -->
+<div class="skip-nav">
+    <a href="#contents-main">본문 내용 바로가기</a>
+    <a href="#gnb">주메뉴 바로가기</a>
+</div>
 
 <div class="wrap">
     <button type="button" class="mode">
@@ -21,6 +26,7 @@
         </div>
         <button type="button" class="menu-btn">메뉴 열기</button>
         <nav class="gnb">
+            <h2 class="blind">주메뉴</h2>
             <div class="column">
                 <ul>
                     <li><a href="../index.html">HOME</a></li>
@@ -43,11 +49,11 @@
     </header>
     <section class="section-container section-contact">
         <div id="contents-main" class="contents-main">
-            <h2 class="blind">메인 컨텐츠</h2>
             <div class="inner-box">
                 <div class="title">
-                    <div><span>CONTA</span></div>      
-                    <div><span>CT US</span></div>
+                    <h2 class="blind">CONTACT US</h2>
+                    <div aria-hidden="true"><span>CONTA</span></div>      
+                    <div aria-hidden="true"><span>CT US</span></div>
                 </div>
                 <div class="container">
                     <div class="text">
@@ -61,49 +67,48 @@
                         </div>
                     </div>
                     <div class="info active">
-                        <h4>INFO</h4>
+                        <h3>INFO</h3>
                         <ul>
                             <li><a href="tel:+8210-2309-9443">010-2309-9443</a></li>
                             <li><a href="mailto:scmjazz@naver.com">scmjazz@naver.com</a></li>
                             <li><a href="https://github.com/cheolmin-s" target="_blank" title="새 창 열림">GITHUB PAGES</a></li>
                         </ul>
                     </div>
+
                     <div class="credits active">
-                        <h4>CREDITS</h4>
-        
-                            <dl>
-                                <dt>HTML5</dt>
-                                <dd>본 웹사이트는 HTML5로 제작되었습니다. 시맨틱 태그를 사용하여 의미론적으로 마크업을 하고자 노력했습니다.</dd>
-                            </dl>
-                            <dl>
-                                <dt>CSS3</dt>
-                                <dd>미니멀한 컨셉의 본 웹사이트의 지루함을 없애고자 Animation 을 활용하여 역동 전인 면모를 갖추기 위해 노력하였습니다.</dd>
-                            </dl>
-                            <dl>
-                                <dt>JAVASCRIPT</dt>
-                                <dd>본 웹사이트의 동적인 인터페이스 및 작동은 Javascript를 기반으로 만들어졌습니다.</dd>
-                            </dl>
-                            <dl>
-                                <dt>GULP</dt>
-                                <dd>반복적이고 자주 사용되는 일을 자동화 시켜주는 GULP를 이용하여 보다 쉽고 빠르게 웹사이트 제작이 가능하였습니다.</dd>
-                            </dl>
-                            <dl>
-                                <dt>SCSS</dt>
-                                <dd>CSS 전처리 언어인 SCSS를 이용하여 간결한 문법을 통해 코딩 시간을 단축하였습니다.</dd>
-                            </dl>
-                            <dl>
-                                <dt>ARITA-DOTUM FONT</dt>
-                                <dd>이용자의 가독성과 웹사이트의 아름다운 한글 타이포 구현을 위해 아리따돋움 웹폰트를 사용하였습니다.</dd>
-                            </dl>
-                            <dl>
-                                <dt>ROBOTO FONT</dt>
-                                <dd>이용자의 가독성과 웹사이트의 아름다운 영문 타이포 구현을 위해 ROBOTO 웹폰트를 사용하였습니다.</dd>
-                            </dl>
-                            <dl>
-                                <dt>GITHUB PAGES</dt>
-                                <dd>이 웹사이트는 GitHub Pages 서비스에서 무료로 호스팅되고 있습니다.</dd>
-                            </dl>
-                        
+                        <h3>CREDITS</h3>       
+                        <dl>
+                            <dt>HTML5</dt>
+                            <dd>본 웹사이트는 HTML5로 제작되었습니다. 시맨틱 태그를 사용하여 의미론적으로 마크업을 하고자 노력했습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>CSS3</dt>
+                            <dd>미니멀한 컨셉의 본 웹사이트의 지루함을 없애고자 Animation 을 활용하여 역동 전인 면모를 갖추기 위해 노력하였습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>JAVASCRIPT</dt>
+                            <dd>본 웹사이트의 동적인 인터페이스 및 작동은 Javascript를 기반으로 만들어졌습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>GULP</dt>
+                            <dd>반복적이고 자주 사용되는 일을 자동화 시켜주는 GULP를 이용하여 보다 쉽고 빠르게 웹사이트 제작이 가능하였습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>SCSS</dt>
+                            <dd>CSS 전처리 언어인 SCSS를 이용하여 간결한 문법을 통해 코딩 시간을 단축하였습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>ARITA-DOTUM FONT</dt>
+                            <dd>이용자의 가독성과 웹사이트의 아름다운 한글 타이포 구현을 위해 아리따돋움 웹폰트를 사용하였습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>ROBOTO FONT</dt>
+                            <dd>이용자의 가독성과 웹사이트의 아름다운 영문 타이포 구현을 위해 ROBOTO 웹폰트를 사용하였습니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>GITHUB PAGES</dt>
+                            <dd>이 웹사이트는 GitHub Pages 서비스에서 무료로 호스팅되고 있습니다.</dd>
+                        </dl>                        
                     </div>
                 </div>
             </div>
@@ -111,6 +116,7 @@
     </section>
     <!--푸터-->
     <footer class="common-footer">
+        <h2 class="blind">푸터</h2>
         <div class="copy">Copyright 2019. Cheol-Min Song all rights reserved.</div>
     </footer>
 </div>
