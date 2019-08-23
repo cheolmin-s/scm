@@ -24,7 +24,7 @@
                     <div><span>FOLIO</span></div>
                 </div>
                 <div class="container">
-                    <div class="portfolio">
+                    <div class="portfolio active">
                         <ul>
                             <li>
                                 <a href="#">
@@ -78,5 +78,11 @@
     <span></span>
 </div>
 <script src="../js/common.js"></script>
+<script>
+    const active = document.querySelector('.active');
+    setTimeout(function(){
+        active.classList.add("on");
+    },1600)
+</script>
 </body>
 </html>

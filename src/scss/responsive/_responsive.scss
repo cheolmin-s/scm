@@ -66,12 +66,20 @@
 
         .gnb{
 
+            &:before{
+                border-right:0;
+            }
+
             & li{
                 margin-bottom:30px;
 
                 & a{
                     font-size:80px;
                 }
+            }
+
+            .line span:before{
+                border-right:0;
             }
         }
 
@@ -117,6 +125,16 @@
         .heading{
             font-size:$font60;
             padding:200px 0 0 0;
+        }
+
+    }
+
+    .section-portfolio{
+
+        .portfolio li:hover{
+            &:after,&:before{
+                opacity:0;
+            }
         }
 
     }
