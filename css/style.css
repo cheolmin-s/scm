@@ -81,9 +81,11 @@ body { font-family: "Roboto", sans-serif; }
 
 .wrap.on .section-about h3, .wrap.on .section-about dt { color: #fff; -webkit-transition: all .5s ease-out; -o-transition: all .5s ease-out; -moz-transition: all .5s ease-out; transition: all .5s ease-out; }
 
+.wrap.on .section-portfolio .info span { color: #fff; }
+
 .wrap.on .section-portfolio .info p { color: #aaa; }
 
-.wrap.on .section-contact h4 { color: #fff; -webkit-transition: all .5s ease-out; -o-transition: all .5s ease-out; -moz-transition: all .5s ease-out; transition: all .5s ease-out; }
+.wrap.on .section-contact h3 { color: #fff; -webkit-transition: all .5s ease-out; -o-transition: all .5s ease-out; -moz-transition: all .5s ease-out; transition: all .5s ease-out; }
 
 .wrap.on .section-contact .info a { color: #aaa; -webkit-transition: all .5s ease-out; -o-transition: all .5s ease-out; -moz-transition: all .5s ease-out; transition: all .5s ease-out; }
 
@@ -385,7 +387,7 @@ body { font-family: "Roboto", sans-serif; }
 
 .section-portfolio .portfolio .info { margin-top: 30px; min-height: 150px; }
 
-.section-portfolio .portfolio .info span { display: block; margin-bottom: 15px; font-weight: bold; }
+.section-portfolio .portfolio .info span { display: block; margin-bottom: 15px; color:#000; font-weight: bold; }
 
 .section-portfolio .portfolio .info p { font-size: 14px; color: #888; line-height: 2; }
 
